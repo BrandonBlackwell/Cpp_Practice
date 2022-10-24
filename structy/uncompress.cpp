@@ -46,9 +46,9 @@ std::string uncompress(std::string s) {
 }
 
 
-void main() {
+int  main() {
 	// function call
-std::string result = uncompress(2c3a1t);
+std::string result = uncompress("2c3a1t");
 std::cout<<result<<std::endl;
 return 0;
 
