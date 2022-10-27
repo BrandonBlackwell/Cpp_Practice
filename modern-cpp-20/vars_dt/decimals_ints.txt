@@ -1,0 +1,16 @@
+Assignment notation '='Syntax: type var_name = data;
+functional initialization '()'Syntax: type var_name(data);
+braced initialization '{}' Syntax: type var_name{data};
+
+Functional initialization and assignment initialization are less safe than braced initialization because of narrowing conversion.
+Narrowing conversion store what it can and chops off the rest of the data.
+Ex:  int var_name = 2.9;
+	cout << var_name;
+Output: 2
+
+INTEGER MODIFIERS
+
+- "signed" stores positive and negative numbers. Occupies 4 bytes of memory. The range of values that can be stored with signed int is -2^n-1 ~ 2n^-1
+- "unsigned" stores positive numbers only. Occupies 4 bytes of memory.2^n-1
+- "short"int - 2 bytes
+- "long" int - 4bytes

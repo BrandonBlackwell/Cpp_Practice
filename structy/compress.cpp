@@ -2,8 +2,8 @@
 #include<cctype>
 #include<string>
 /*
- Time Complexity:O()
- Space Complexity:
+ Time Complexity:O(n)
+ Space Complexity:O(n)
  */
 std::string compress(std::string s){
 	s += "*";
