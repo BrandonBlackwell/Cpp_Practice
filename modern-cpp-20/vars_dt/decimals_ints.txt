@@ -1,3 +1,4 @@
+INTEGER MODIFIERS
 Assignment notation '='Syntax: type var_name = data;
 functional initialization '()'Syntax: type var_name(data);
 braced initialization '{}' Syntax: type var_name{data};
@@ -8,9 +9,17 @@ Ex:  int var_name = 2.9;
 	cout << var_name;
 Output: 2
 
-INTEGER MODIFIERS
-
-- "signed" stores positive and negative numbers. Occupies 4 bytes of memory. The range of values that can be stored with signed int is -2^n-1 ~ 2n^-1
-- "unsigned" stores positive numbers only. Occupies 4 bytes of memory.2^n-1
+- "signed" stores positive and negative numbers. Occupies 4 bytes of memory. The range of values that can be stored with signed int is -2^n-1 to 2n^-1. Half the numbers are negative and the other half is positive.
+- "unsigned" stores positive numbers only. Occupies 4 bytes of memory.2^n-1. Instead of splitting the numbers in half, all 4billion are positive.
 - "short"int - 2 bytes
-- "long" int - 4bytes
+- "long" int - 4 bytes
+FLOATING POINT TYPES
+- float takes up 4 bytes of memory. The precision of a float is 7.
+- double takes up 8 bytes of memory.The precision of a double is 15.
+- long double takes up 12 bytes of memory. The precision of a long double is greater than 15.
+	DECLARATION/INITIALIZATION
+		float num = 1.38945795; or float num {1.38945795f};
+BOOLEANS
+- 1 -> True
+- 0 -> False
+- Occupies 8 bytes in memory
