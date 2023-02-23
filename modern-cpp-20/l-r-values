@@ -1,0 +1,34 @@
+Helpful article:
+https://www.internalpointers.com/post/understanding-meaning-lvalues-and-rvalues-c#:~:text=In%20C%2B%2B%20an%20lvalue%20is,since%20they%20exist%20as%20variables.
+
+Notes:
+lvalue is some memory location and goes on the left side of the assignment operator. It's the container for the rvalue.
+rvalue is the actual value and goes on the right side of the assignment operator. It doesn't have a memory location.
+
+Using a const referrence "const type& name" as the param for a function can take a rvalue.
+Why? Because under the hood a temp variable is used to store the rvalue.
+
+Good Ex:
+const int& ref = 10;  // OK!
+
+void fnc(const int& x)
+{
+}
+
+int main()
+{
+    fnc(10);  // OK!
+}
+
+Bad Ex:
+void fnc(int& x)
+{
+}
+
+int main()
+{
+    fnc(10);  // Nope!
+    // This works instead:
+    // int x = 10;
+    // fnc(x);
+}
